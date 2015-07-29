@@ -1,5 +1,5 @@
 # Getting Started
-With the NatSpec Selenium Library you can create UI tests in natural language using NatSpec and Selenium in an easy way. 
+With the NatSpec Selenium Library you can create UI tests in natural language using [NatSpec](http://www.nat-spec.com/) and [Selenium](http://www.seleniumhq.org/) in an easy way. If you are not familiar with NatSpec you should first read the [NatSpec Getting Started](http://www.nat-spec.com/downloads/NatSpec_GettingStarted_2.2.5.pdf). Knowledge of the Selenium library is not required.
 
 ## Provider
 To configure the NatSpec Selenium Library you have to create a class wich extends the `AgileSeleniumProviderEN` class and implements the `ISyntaxPatternProvider` interface. In this class all available pages of your application are registered with its components. 
@@ -51,12 +51,12 @@ new Page("HomeScreen", "/",
   	new Component("#submit", "Submit", ComponentType.BUTTON)	
 )
 ```
-The first argument is the name of the screen which is used in your NatSpec tests, the second the url of the screen. All other arguments are instances of `IComponent` to specify the components that are in your page. To create a component you can use the `Component` class. You have to define the CSS-Selector of the component (`#password_field`) the name which is used in the tests (`Password`) and the type of the component (`ComponentType.PASSWORDFIELD`). 
+The first argument is the name of the screen which is used in your NatSpec tests, the second the url of the screen. All other arguments are instances of `IComponent` to specify the components that are in your page. To create a component you can use the `Component` class. You have to define the CSS-Selector of the component (e.g. `#password_field`) the name which is used in the tests (e.g. `Password`) and the type of the component (e.g. `ComponentType.PASSWORDFIELD`). 
 
-The pages and the components you define in the Provider class are used to generate the NatSpec sentence you can use in your Selenium Tests. For example you can use the `Navigate to HomeScreen` sentence when you have declared your HomeScreen in the provider class.
+The pages and the components defined in the Provider class are used to generate the NatSpec sentences you can use in your Selenium Tests. For example you can use the `Navigate to HomeScreen` sentence when you have declared your HomeScreen in the provider class.
 
 ## Testing with NatSpec and Selenium
-After you have finished the configuration you can start writing your NatSpec tests. All you have to do is to create a `_NatSpecTemplate` in the same way you would create one for another NatSpec test. You can create one with the Eclipse wizard. Then you have to register the test support class for selenium `SeleniumSupport`. In this example the `_NatSpecTemplate` would look like this:
+After you have finished the configuration you can start writing your NatSpec tests. All you have to do is to create a `_NatSpecTemplate` in the same way you would create one for another NatSpec test. If you are not familiar with NatSpec you can read the [NatSpec Getting Started](http://www.nat-spec.com/downloads/NatSpec_GettingStarted_2.2.5.pdf). You can create one with the Eclipse wizard. Then you have to register the test support class for selenium `SeleniumSupport`. In this example the `_NatSpecTemplate` would look like this:
 
 ```java 
 package de.agileselenium.test;
