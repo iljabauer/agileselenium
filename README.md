@@ -56,7 +56,7 @@ The first argument is the name of the screen which is used in your NatSpec tests
 The pages and the components defined in the Provider class are used to generate the NatSpec sentences you can use in your Selenium Tests. For example you can use the `Navigate to HomeScreen` sentence when you have declared your HomeScreen in the provider class.
 
 ## Testing with NatSpec and Selenium
-After you have finished the configuration you can start writing your NatSpec tests. All you have to do is to create a `_NatSpecTemplate` in the same way you would create one for another NatSpec test. If you are not familiar with NatSpec you can read the [NatSpec Getting Started](http://www.nat-spec.com/downloads/NatSpec_GettingStarted_2.2.5.pdf). You can create one with the Eclipse wizard. Then you have to register the test support class for selenium `SeleniumSupport`. In this example the `_NatSpecTemplate` would look like this:
+After you have finished the configuration you can start writing your NatSpec tests. All you have to do is to create a `_NatSpecTemplate` in the same way you would create one for another NatSpec test. If you are not familiar with NatSpec you can read the [NatSpec Getting Started](http://www.nat-spec.com/downloads/NatSpec_GettingStarted_2.2.5.pdf). You can create one with the Eclipse wizard. Then you have add a field of the type `SeleniumSupport` to register the test support class for this template. In this example the `_NatSpecTemplate` could look like this:
 
 ```java 
 package de.agileselenium.test;
