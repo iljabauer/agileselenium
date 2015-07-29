@@ -2,7 +2,7 @@
 With the NatSpec Selenium Library you can create UI tests in natural language using NatSpec and Selenium in an easy way. 
 
 ## Provider
-To configure the NatSpec Selenium Library you have to create a class wich extends the `AgileSeleniumProvider` class and implements the `ISyntaxpatternProvider` interface. In this class all available pages of your application are registered with its components. 
+To configure the NatSpec Selenium Library you have to create a class wich extends the `AgileSeleniumProviderEN` class and implements the `ISyntaxPatternProvider` interface. In this class all available pages of your application are registered with its components. 
 
 To create the provider class you have to import three dependencies from NatSpec:
 ```java
