@@ -43,7 +43,7 @@ public class PatternProvider extends AgileSeleniumProviderEN implements ISyntaxP
 	}
 }
 ```
-You have to implement a parameterless constructor for this class. The first argument of the super call is the qualified name of the package that contains your Selenium Tests. In this example it is `"/de.agileselenium.test/"`. All other arguments are instances of the `IPage` interface which define the registered Pages of your application. You can use the already implemented `Page` class:
+You have to implement a parameterless constructor for this class. The first argument of the super call is the qualified name of the package that contains your Selenium Tests. In this example it is `"/de.agileselenium.test/"`. All other arguments are instances of the `IPage` interface which defines the registered Pages of your application. You can use the already implemented `Page` class:
 ```java
 new Page("HomeScreen", "/", 
   	new Component("#password_field", "Password", ComponentType.PASSWORDFIELD),
