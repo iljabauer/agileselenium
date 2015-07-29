@@ -1,2 +1,26 @@
 # Getting Started
-Space: the final frontier. These are the voyages of the starship Enterprise. Its continuing mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no one has gone before.
+
+
+<!---
+dependencies
+## Project Setup
+3 plugins: provider, configuration, tests
+
+##provider
+Klasse die AgileSeleniumProvider extended und ISyntaxpatternProvider implementiert
+Konstruktor: name vom TestPackage super() + IPage instanzen (oder Page)
+add
+>MANIFEST.MF
+Bundle-ClassPath: bin/,
+.
+dependencies:
+Require-Bundle: de.devboost.natspec,
+de.devboost.natspec.testscripting.java,
+de.devboost.agileselenium.patternprovider,
+de.devboost.agilselenium.test.configuration
+
+
+##tests
+_NatSpecTemplate:
+private SeleniumSupport seleniumSupport.
+-->
