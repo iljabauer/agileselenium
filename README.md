@@ -18,14 +18,13 @@ package de.agileselenium.provider;
 import de.devboost.agileselenium.patternprovider.AgileSeleniumProviderEN;
 import de.devboost.agileselenium.patternprovider.Component;
 import de.devboost.agileselenium.patternprovider.ComponentType;
-import de.devboost.agileselenium.patternprovider.IPage;
 import de.devboost.agileselenium.patternprovider.Page;
 import de.devboost.natspec.patterns.ISyntaxPatternProvider;
 
 
 public class PatternProvider extends AgileSeleniumProviderEN implements ISyntaxPatternProvider {
 
-	public PatternProvider(String projectName, IPage[] pages) {
+	public PatternProvider() {
 		super("/de.agileselenium.test/", 
 				
 				new Page("HomeScreen", "/", 
@@ -43,8 +42,7 @@ public class PatternProvider extends AgileSeleniumProviderEN implements ISyntaxP
 	}
 }
 ```
-
-Notice that the first argument of the super call in the constructor is the qualified name of the package that contains your Selenium Tests. In this example it is `"/de.agileselenium.test/"`. All other arguments are instances of the `IPage` interface which define the registered Pages of your application. You can use the already implemented `Page` class:
+You have to implement a parameterless constructor for this class. The first argument of the super call is the qualified name of the package that contains your Selenium Tests. In this example it is `"/de.agileselenium.test/"`. All other arguments are instances of the `IPage` interface which define the registered Pages of your application. You can use the already implemented `Page` class:
 ```java
 new Page("HomeScreen", "/", 
   	new Component("#password_field", "Password", ComponentType.PASSWORDFIELD),
