@@ -87,7 +87,7 @@ public class _NatSpecTemplate {
 In this case we use `new HtmlSeleniumSupport()` to create the selenium support class for an HTML application. You can also use the `VaadinSeleniumSupport` class or create your own support class.
 
 When you now create a new NatSpec test you should have sentences for navigating to all of your screens.
-<p align="center"><img src="http://uploads.felix-hanspach.de/natspec_selenium/completion.png" width="350"/></p>
+<p align="center"><img src="http://uploads.felix-hanspach.de/natspec_selenium/completion.png?reload=1" width="350"/></p>
 
 Note that all sentences are context specific. This means that you only get suggestions for components that are in your screens. Have fun writing natural language tests with Selenium and NatSpec.
 
