@@ -55,7 +55,42 @@ The first argument is the name of the screen which is used in your NatSpec tests
 The pages and the components you define in the Provider class are used to generate the NatSpec sentence you can use in your Selenium Tests. For example you can use the `Navigate to HomeScreen` sentence when you have declared your HomeScreen in the provider class.
 
 ## Testing with NatSpec and Selenium
-After you have finished the configuration you can start writing your NatSpec tests. All you have to do is to create a _NatspecTemplate
+After you have finished the configuration you can start writing your NatSpec tests. All you have to do is to create a `_NatSpecTemplate` in the same way you would create one for another NatSpec test. You can create one with the Eclipse wizard. Then you have to register the test support class for selenium `SeleniumSupport`. In this example the `_NatSpecTemplate` would look like this:
+
+```java 
+package de.agileselenium.test;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import de.devboost.agileselenium.HtmlSeleniumSupport;
+import de.devboost.agileselenium.SeleniumSupport;
+
+
+@SuppressWarnings("unused")
+public class _NatSpecTemplate {
+	private SeleniumSupport seleniumSupport = new SeleniumSupport(new HtmlSeleniumSupport());
+
+	@Test
+	public void executeScript() throws Exception {
+		/* @MethodBody */
+	}
+
+	@Before
+	public void setUp() { /* ... */ }
+	
+	@After
+	public void shutdown() { /* ... */ }
+}
+```
+In this case we use `new HtmlSeleniumSupport()` to create the selenium support class for an HTML application. You can also use the `VaadinSeleniumSupport` class or create your own support class.
+
+When you now create a new NatSpec test you should have sentences for navigating to all of your screens.
+<p align="center"><img src="http://uploads.felix-hanspach.de/natspec_selenium/completion.png" width="350"/></p>
+
+Note that all sentences are context specific. This means that you only get suggestions for components that are in your screens. Have fun writing natural language tests with Selenium and NatSpec.
+
 
 <!---
 dependencies
